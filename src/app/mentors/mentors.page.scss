@@ -1,0 +1,87 @@
+ion-content {
+  .top-section {
+    background-color: var(--app-primary-header); /* Set background color with !important */
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ion-item {
+      ion-select {
+        --ion-background-color: transparent !important; /* Remove background color with !important */
+        --ion-border-color: transparent !important; /* Remove border with !important */
+        --ion-placeholder-color: #ffffff !important; /* Text color with !important */
+
+        &.select-icon {
+          color: #ffcc00 !important; /* Icon color with !important */
+        }
+      }
+    }
+  }
+
+  ion-list {
+    background: rgb(255, 255, 255) !important; /* Light gray background color with !important */
+
+    ion-item {
+      align-items: center;
+      gap: 16px;
+      border-radius: 8px;
+      background-color: white !important; /* Set background to white with !important */
+      border: 2px solid #ffcc00 !important; /* Yellow border with !important */
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1) !important; /* Shadow with !important */
+      margin: 10px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+      &:hover {
+        transform: translateY(-5px) !important; /* More prominent lift on hover with !important */
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2) !important; /* Highlight on hover with !important */
+      }
+
+      ion-avatar {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffcc00 !important; /* Yellow background with !important */
+        border-radius: 50%;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2) !important; /* Shadow with !important */
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 50%; /* Make the avatar image circular */
+        }
+      }
+
+      ion-label {
+        flex: 1;
+
+        /* Set the background color of the text to white with !important */
+        background-color: white !important;
+
+        h2 {
+          font-size: 20px;
+          margin-bottom: 8px;
+          color: #333 !important; /* Text color with !important */
+        }
+
+        p {
+          font-size: 16px;
+          color: #777 !important; /* Text color with !important */
+          margin-bottom: 6px;
+        }
+      }
+    }
+  }
+
+  
+}/* Target the <a> element with class "item-native" */
+a.item-native {
+  /* Add your custom styles here */
+  background-color: #ffcc00; /* Change the background color to yellow */
+  color: #333; /* Change the text color to dark gray */
+  border: 2px solid #ffcc00; /* Add a yellow border */
+  /* Add any other custom styles you need */
+}
+

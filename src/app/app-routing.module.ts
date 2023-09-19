@@ -14,6 +14,20 @@ const routes: Routes = [
     redirectTo: `${RouterLinks.LANGUAGE_SETTING}`,
     pathMatch: 'full'
   },
+
+  {
+    path: 'mentors',
+    loadChildren: () => import('./mentors/mentors.module').then(m => m.MentorsPageModule)
+  },
+  {
+    path: 'mentor/:mentorId', // Change ':id' to ':mentorId'
+    loadChildren: () => import('./mentor-details/mentor-details.module').then(m => m.MentorDetailsPageModule)
+  },
+  {
+    path: 'booking-popup',
+    loadChildren: () => import('./booking-popup/booking-popup.module').then( m => m.BookingPopupPageModule)
+  },
+
   {
     path: `${RouterLinks.LANGUAGE_SETTING}/:isFromSettings`,
     loadChildren: () => import('./language-settings/language-settings.module').then(m => m.LanguageSettingsModule)
@@ -58,6 +72,9 @@ const routes: Routes = [
   { path: RouterLinks.STORAGE_SETTINGS, loadChildren: () => import('./storage-settings/storage-settings.module').then(m => m.StorageSettingsPageModule) },
   { path: RouterLinks.COURSES, loadChildren: () => import('./courses/courses.module').then(m => m.CoursesPageModule) },
   { path: RouterLinks.SEARCH, loadChildren: () => import('./search/search.module').then(m => m.SearchPageModule) },
+  // { path: RouterLinks.MENTORS, loadChildren: () => import('./mentors/mentors.module').then(m => m.MentorsModule) },
+  
+  
   { path: RouterLinks.PROFILE, loadChildren: () => import('./profile/profile.module').then(m => m.ProfilePageModule) },
   { path: RouterLinks.ACTIVE_DOWNLOADS, loadChildren: () => import('./active-downloads/active-downloads.module').then(m => m.ActiveDownloadsPageModule) },
   { path: RouterLinks.COURSE_BATCHES, loadChildren: () => import('./course-batches/course-batches.module').then(m => m.CourseBatchesPageModule) },
@@ -138,7 +155,7 @@ const routes: Routes = [
     path: RouterLinks.OTP,
     loadChildren: () => import('./signup/otp/otp.module').then(m => m.OtpPageModule)
   }
-
+  
 ];
 
 @NgModule({

@@ -1884,6 +1884,27 @@ describe('AppComponent', () => {
             );
         });
 
+        it('should navigate to mentors page when mentors is clicked in menu', () => {
+            // arrange
+            const menuName = {
+                menuItem: 'MENTORS'
+            };
+            const routeUrl = [`/${RouterLinks.MENTORS}`];
+            mockTelemetryGeneratorService.generateInteractTelemetry = jest.fn();
+            // act
+            appComponent.menuItemAction(menuName);
+
+            // assert
+            expect(mockRouter.navigate).toHaveBeenCalledWith(routeUrl, expect.anything());
+            expect(mockTelemetryGeneratorService.generateInteractTelemetry).toHaveBeenCalledWith(
+                InteractType.TOUCH,
+                InteractSubtype.MENTORS_CLICKED,
+                Environment.USER,
+                PageId.PROFILE
+            );
+        });
+        
+
         it('should navigate to SETTINGS page when settings is clicked in menu', () => {
             // arrange
             const menuName = {

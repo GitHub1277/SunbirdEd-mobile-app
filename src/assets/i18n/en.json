@@ -1379,6 +1379,7 @@
   "INCREASE_FONT": "Increase font size",
   "DEFAULT_FONT": "Default font size",
   "DECREASE_FONT": "Decrease font size",
+  "MENTORS": "Mentors",
   "FRMELEMNTS_LBL_JOIN_PROGRAM_POPUP":"Join program",
   "FRMELEMNTS_LBL_JOIN_PROGRAM_MSG":"Please join {{name}} program to view and access this {{type}}.",
   "FRMELEMNTS_MSG_NO_SOLUTIONS_FOR_PROGRAM":"There are no {{type}} added to this program",

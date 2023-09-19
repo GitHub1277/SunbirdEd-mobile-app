@@ -518,6 +518,10 @@ export class RouterLinks {
     // Search Routes
     public static readonly SEARCH = 'search';
 
+    // Mentors Router
+    public static readonly MENTORS = 'mentors';
+
+    
     // QR Scanner Routes
     public static readonly QRSCANNER_ALERT = 'qrscanner-alert';
     public static readonly QRCODERESULT = 'qrcoderesult';

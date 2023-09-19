@@ -497,6 +497,7 @@ export class CategoryListPage implements OnInit, OnDestroy {
             }
         }).catch(e => console.error(e));
     }
+    
 
     async onPrimaryFacetFilterSelect(primaryFacetFilter: { code: string }, toApply: FilterValue[]) {
         const appliedFilterCriteria: ContentSearchCriteria = this.deduceFilterCriteria();

@@ -168,7 +168,7 @@ export enum PageId {
     CERTIFICATE_VIEW = 'certificate-view',
     ACTIVITY_DASHBOARD = 'activity-dashboard',
     USER = 'user',
-    RESOURCES = 'resources'
+    RESOURCES = 'resources',
 }
 
 export enum LogType {
@@ -341,6 +341,7 @@ export enum InteractSubtype {
     ANNOUNCEMENT_CLICKED = 'announcement-clicked',
     SIGNIN_OVERLAY_CLICKED = 'signin-overlay-clicked',
     SETTINGS_CLICKED = 'settings-clicked',
+    MENTORS_CLICKED = 'settings-clicked',
     NOT_NOW_CLICKED = 'not-now-clicked',
     ALLOW_CLICKED = 'allow-clicked',
     LANGUAGE_CLICKED = 'language-clicked',

@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="yellow">
+    <ion-buttons slots="start">
+      <ion-back-button defaultHref="/mentors"></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-title>{{ mentor?.name }}</ion-title> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="info-section">
+    <h2>{{ mentor?.name }}</h2>
+    <p><strong>Specialist In:</strong> {{ mentor?.specialistIn }}</p>
+  </div>
+
+  <ion-card class="mentor-summary-card">
+    <ion-card-header>
+      <ion-card-title>Mentor Summary</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Experience:</strong> {{ mentor?.experience }}</p>
+      <p><strong>Total Meetings:</strong> {{ mentor?.totalMeetings }}</p>
+      <p><strong>Qualification:</strong> {{ mentor?.qualification }}</p>
+      <p><strong>Professional Experience:</strong> {{ mentor?.professionalExperience }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="about-mentor">
+    <p>{{ mentor?.aboutMentor }}</p>
+  </div>
+
+  <ion-list>
+    <ion-item *ngFor="let slot of slots">
+      <div class="slot-card-button" (click)="openBookingPopup()">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{ slot.fulfillment?.startTime | date: 'short' }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p><strong>Status:</strong> {{ slot.fulfillment?.status }}</p>
+          </ion-card-content>
+        </ion-card>
+        <ion-button color="primary">BOOK SLOT</ion-button>
+      </div>
+    </ion-item>
+  </ion-list>
+  <div *ngIf="bookingSuccess" class="success-message">
+    Session booked successfully!
+  </div>
+  <!-- <button (click)="openBookingPopup()">BOOK SLOT</button> -->
+
+</ion-content>

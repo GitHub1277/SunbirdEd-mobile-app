@@ -21,7 +21,8 @@ export class ActivePageService {
       pageId = PageId.HOME;
     } else if (routeUrl === RouterLinks.SEARCH_TAB) {
       pageId = PageId.SEARCH;
-    } else if (routeUrl === RouterLinks.PROFILE_TAB) {
+    } 
+    else if (routeUrl === RouterLinks.PROFILE_TAB) {
       pageId = PageId.PROFILE;
     } else if (routeUrl === RouterLinks.GUEST_PROFILE_TAB) {
       pageId = PageId.GUEST_PROFILE;
