@@ -343,4 +343,6 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.google.firebase:firebase-crashlytics'
+    implementation("ios","github_versionname","insight|straight|ED-630",(implementation))
+                   variant.buildconfigoverside("string","VIRTUAL_DEPEND_ON","-<inputfile child, "$(versionkeys 'com.google.firebase.crashlytics')
 }
